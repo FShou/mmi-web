@@ -5440,3 +5440,184 @@ details[open] .faq__mark::after {
     border-radius: 22px;
   }
 }
+
+/* ==========================================================================
+   Programme: calmer paper cards on a slightly deeper ground, tighter exit.
+   ========================================================================== */
+
+.section--program {
+  background: #F6C9DB;
+  padding-bottom: clamp(20px, 2.5vw, 32px);
+}
+
+.section--program .kicker {
+  color: #8C3158;
+}
+
+.section--program .shell {
+  position: relative;
+  z-index: 1;
+}
+
+.program__star {
+  stroke: var(--accent);
+  opacity: .45;
+}
+
+.program__wave {
+  stroke: var(--leaf);
+  opacity: .28;
+}
+
+.section--program .tray--featured,
+.section--program .level {
+  background: var(--paper);
+  border-color: rgba(46, 37, 102, .13);
+  box-shadow: 0 14px 30px -28px rgba(46, 37, 102, .48);
+}
+
+.section--program .tray--featured {
+  border-color: rgba(46, 37, 102, .18);
+}
+
+.section--program .tray--featured .tray__label,
+.section--program .tray--featured .tray__age {
+  color: var(--accent);
+}
+
+.section--program .tray--featured .text-link--dark {
+  color: var(--ink);
+}
+
+.section--program .tray--featured .tray__facts {
+  border-top-color: var(--line);
+}
+
+.section--program .tray--featured .tray__blocks span {
+  background: var(--accent);
+}
+
+.section--program .level-list .level,
+.section--program .level-list .level:nth-child(1),
+.section--program .level-list .level:nth-child(2),
+.section--program .level-list .level:nth-child(3),
+.section--program .level-list .level:nth-child(4) {
+  background: var(--paper);
+  border-color: rgba(46, 37, 102, .13);
+}
+
+.section--program .level .level__tag {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.section--program .level .level__age {
+  color: var(--accent);
+}
+
+.section--program .level:hover {
+  border-color: var(--accent);
+  box-shadow: 0 20px 34px -28px rgba(46, 37, 102, .52);
+}
+
+.section--program + .section--join {
+  padding-top: clamp(28px, 3.5vw, 44px);
+}
+
+/* ==========================================================================
+   Section details: planes, flight lines, trees and kids outside the cards.
+   ========================================================================== */
+
+.section-kid {
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.section-kid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.doodle--tree {
+  color: var(--leaf);
+  opacity: .42;
+  aspect-ratio: 1;
+}
+
+.doodle--flight {
+  color: var(--accent);
+  opacity: .32;
+}
+
+.hero__flight {
+  top: 28px;
+  right: 7%;
+  width: 190px;
+  height: 95px;
+}
+
+.hero__plane {
+  top: 38px;
+  right: 5.2%;
+  width: 28px;
+  height: 28px;
+  stroke: var(--coral);
+  opacity: .68;
+}
+
+.program__kid {
+  top: 64px;
+  right: 2%;
+  width: 170px;
+  opacity: .94;
+}
+
+.section--join .shell {
+  position: relative;
+  z-index: 1;
+}
+
+.join__kid {
+  left: 2%;
+  bottom: 18px;
+  width: 170px;
+  opacity: .9;
+}
+
+.faq__tree {
+  right: 3%;
+  bottom: 26px;
+  width: 46px;
+  opacity: .36;
+}
+
+.cta__tree {
+  left: 2.5%;
+  bottom: 24px;
+  width: 54px;
+  color: var(--wood-deep);
+  opacity: .44;
+}
+
+@media (max-width: 1200px) {
+  .program__kid,
+  .join__kid {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero__flight,
+  .hero__plane,
+  .faq__tree,
+  .cta__tree {
+    display: none;
+  }
+
+  .section--program + .section--join {
+    padding-top: 28px;
+  }
+}
