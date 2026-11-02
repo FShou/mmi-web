@@ -593,8 +593,6 @@ html[data-lang="en"] .lang-id {
   overflow: hidden;
   border: 1px solid var(--line);
   background-color: var(--wood-soft);
-  background-image: radial-gradient(color-mix(in srgb, currentColor 10%, transparent) 1px, transparent 1px);
-  background-size: 19px 19px;
   color: var(--ink);
 }
 
@@ -1364,38 +1362,6 @@ html[data-lang="en"] .lang-id {
   max-width: 58ch;
 }
 
-/* ---------- Trust row ---------- */
-
-.trust {
-  background: var(--paper);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding-block: 20px;
-}
-
-.trust__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 14px 36px;
-}
-
-.trust__item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-soft);
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.trust__item .icon {
-  width: 17px;
-  height: 17px;
-  color: var(--accent);
-}
-
 /* ---------- Parents ---------- */
 
 .section--parents {
@@ -2113,12 +2079,6 @@ details[open] .faq__mark::after {
     font-size: 27px;
   }
 
-  .trust__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 9px;
-  }
-
   .faq__list summary {
     padding: 17px 0;
     font-size: 16px;
@@ -2306,42 +2266,6 @@ details[open] .faq__mark::after {
   z-index: 0;
 }
 
-.shape--dot-grid {
-  width: 132px;
-  height: 92px;
-  border-radius: 12px;
-  background-image: radial-gradient(var(--accent) 1.6px, transparent 1.6px);
-  background-size: 18px 18px;
-  opacity: .28;
-}
-
-.dot-grid--light {
-  background-image: radial-gradient(rgba(255, 255, 255, .7) 1.6px, transparent 1.6px);
-  opacity: .38;
-}
-
-.dot-grid--leaf {
-  background-image: radial-gradient(var(--leaf) 1.6px, transparent 1.6px);
-}
-
-.shape--dots-light {
-  width: 76px;
-  height: 60px;
-  border-radius: 10px;
-  background-image: radial-gradient(rgba(255, 255, 255, .7) 1.5px, transparent 1.5px);
-  background-size: 15px 15px;
-  opacity: .34;
-}
-
-.shape--dots-dark {
-  width: 76px;
-  height: 60px;
-  border-radius: 10px;
-  background-image: radial-gradient(var(--leaf) 1.5px, transparent 1.5px);
-  background-size: 15px 15px;
-  opacity: .32;
-}
-
 .shape--ring {
   width: 78px;
   height: 78px;
@@ -2467,11 +2391,6 @@ details[open] .faq__mark::after {
   z-index: 0;
 }
 
-.hero__deco .shape--dot-grid {
-  top: 64px;
-  right: 8%;
-}
-
 .hero__deco .shape--arc {
   bottom: 20%;
   left: 4%;
@@ -2538,11 +2457,6 @@ details[open] .faq__mark::after {
 .deco--hero .shape--spring {
   bottom: 16px;
   left: -18px;
-}
-
-.deco--hero .shape--dots-dark {
-  top: 8px;
-  left: 14px;
 }
 
 .js .hero__copy > * {
@@ -2640,11 +2554,6 @@ details[open] .faq__mark::after {
 .only__art .shape--zigzag {
   top: 24px;
   left: 28px;
-}
-
-.only__art .shape--dot-grid {
-  bottom: 22px;
-  right: 20px;
 }
 
 .only__art img {
@@ -2845,11 +2754,6 @@ details[open] .faq__mark::after {
   top: 22px;
 }
 
-.facility--green .shape--dots-dark {
-  right: 16px;
-  bottom: 14px;
-}
-
 .facility--green .shape--blob-right {
   right: -22px;
   top: 18px;
@@ -2870,7 +2774,6 @@ details[open] .faq__mark::after {
   border-bottom: 1px solid var(--line);
 }
 
-.area__art .shape--dots-light,
 .area__art .shape--blob-right,
 .area__art .shape--ring,
 .area__art .shape--arc-soft {
@@ -2888,11 +2791,9 @@ details[open] .faq__mark::after {
   opacity: .32;
 }
 
-.area__art .shape--dots-light { bottom: 12px; left: 16px; opacity: .4; }
 .area__art .shape--blob-right { right: 14px; top: 14px; opacity: .35; }
 .area__art .shape--ring { right: 18px; bottom: 16px; opacity: .35; }
 .area__art .shape--arc-soft { right: 20px; top: 18px; opacity: .4; }
-.area--math .shape--dots-light { right: 18px; top: 18px; left: auto; bottom: auto; }
 
 /* ---------- Reveal animation ---------- */
 
@@ -2917,22 +2818,9 @@ details[open] .faq__mark::after {
   border-bottom: 1px solid var(--line);
 }
 
-.section--day .shape--dot-grid {
-  top: 60px;
-  right: 6%;
-  background-image: radial-gradient(rgba(245, 243, 250, .5) 1.5px, transparent 1.5px);
-  opacity: .22;
-}
-
 .section--cta .cta {
   position: relative;
   overflow: hidden;
-}
-
-.section--cta .cta .shape--dot-grid {
-  top: 26px;
-  right: 34px;
-  opacity: .16;
 }
 
 .section--cta .cta .shape--arc-soft {
@@ -2954,10 +2842,6 @@ details[open] .faq__mark::after {
   .deco--hero {
     justify-self: stretch;
     max-width: 100%;
-  }
-
-  .hero__deco .shape--dot-grid {
-    right: 4%;
   }
 
   .hero__deco .shape--arc {
@@ -3010,7 +2894,6 @@ details[open] .faq__mark::after {
     padding: 18px;
   }
 
-  .hero__deco .shape--dot-grid,
   .hero__deco .shape--arc,
   .hero__deco .shape--quarter,
   .hero__deco .shape--ring {
@@ -3131,21 +3014,11 @@ details[open] .faq__mark::after {
   aspect-ratio: 4 / 5;
   border-radius: 30px 30px 30px 210px;
   background-color: #E8E0F5;
-  background-image: radial-gradient(color-mix(in srgb, var(--ink) 9%, transparent) 1px, transparent 1px);
-  background-size: 18px 18px;
 }
 
 .hero__visual .photo__icon {
   width: clamp(90px, 10vw, 132px);
   opacity: .28;
-}
-
-.hero__visual .shape--dots-light {
-  top: 18px;
-  right: 16px;
-  left: auto;
-  bottom: auto;
-  opacity: .45;
 }
 
 .hero__visual .shape--ring {
@@ -3362,10 +3235,6 @@ details[open] .faq__mark::after {
   opacity: .22;
 }
 
-.area__art .shape--dots-light {
-  background-image: radial-gradient(color-mix(in srgb, var(--ink) 20%, transparent) 1.5px, transparent 1.5px);
-}
-
 @media (max-width: 760px) {
   .facilities__sun {
     display: none;
@@ -3473,18 +3342,6 @@ details[open] .faq__mark::after {
 
 .facility-slide__art .photo__icon {
   width: clamp(82px, 8vw, 118px);
-  opacity: .38;
-}
-
-.facility-slide__art .shape--dots-dark {
-  right: 18px;
-  bottom: 16px;
-  opacity: .26;
-}
-
-.facility-slide__art .shape--dots-light {
-  right: 18px;
-  top: 16px;
   opacity: .38;
 }
 
@@ -3912,11 +3769,6 @@ details[open] .faq__mark::after {
   background: linear-gradient(128deg, #EFE6FF 0%, #FFF4DB 52%, #E2F7EA 100%);
 }
 
-.hero__deco .shape--dot-grid {
-  background-image: radial-gradient(var(--coral) 1.6px, transparent 1.6px);
-  opacity: .32;
-}
-
 .hero__deco .shape--quarter {
   background: var(--sun);
   opacity: .42;
@@ -4260,21 +4112,13 @@ details[open] .faq__mark::after {
   opacity: .75;
 }
 
-.trust {
-  background: var(--ink);
-  border: 0;
-}
-
-.trust__item {
-  color: var(--mist);
-}
-
-.trust__item .icon {
-  color: var(--sun);
+.section--join {
+  padding-bottom: clamp(28px, 4vw, 40px);
 }
 
 .section--faq {
   background: #F0E7FF;
+  padding-top: clamp(40px, 5vw, 56px);
   overflow: clip;
 }
 
@@ -4438,17 +4282,12 @@ details[open] .faq__mark::after {
 
 /* ==========================================================================
    Colour correction: keep the brighter treatment only where it was approved.
-   Facilities, How to Join, FAQ, trust, CTA and footer stay colourful.
+   Facilities, How to Join, FAQ, CTA and footer stay colourful.
    Hero, only-one, values, programme and areas return to the original palette.
    ========================================================================== */
 
 .hero {
   background: var(--mist);
-}
-
-.hero__deco .shape--dot-grid {
-  background-image: radial-gradient(var(--accent) 1.6px, transparent 1.6px);
-  opacity: .28;
 }
 
 .hero__deco .shape--quarter {
@@ -5447,7 +5286,7 @@ details[open] .faq__mark::after {
 
 .section--program {
   background: #F6C9DB;
-  padding-bottom: clamp(20px, 2.5vw, 32px);
+  padding-bottom: 0;
 }
 
 .section--program .kicker {
@@ -5457,6 +5296,19 @@ details[open] .faq__mark::after {
 .section--program .shell {
   position: relative;
   z-index: 1;
+}
+
+.section--program .program__grid--levels {
+  align-items: stretch;
+}
+
+.section--program .tray--featured {
+  grid-row: auto;
+}
+
+.section--program .level-list {
+  height: 100%;
+  grid-auto-rows: 1fr;
 }
 
 .program__star {
@@ -5471,13 +5323,47 @@ details[open] .faq__mark::after {
 
 .section--program .tray--featured,
 .section--program .level {
-  background: var(--paper);
-  border-color: rgba(46, 37, 102, .13);
-  box-shadow: 0 14px 30px -28px rgba(46, 37, 102, .48);
+  position: relative;
+  overflow: visible;
+  background-color: #FFFDF7;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, 0) 42%),
+    linear-gradient(315deg, rgba(46, 37, 102, .028), transparent 38%);
+  border: 1px solid rgba(46, 37, 102, .14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    0 18px 30px -26px rgba(46, 37, 102, .55);
 }
 
 .section--program .tray--featured {
   border-color: rgba(46, 37, 102, .18);
+}
+
+.section--program .tray--featured::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 34px;
+  width: 74px;
+  height: 18px;
+  background: rgba(255, 255, 255, .55);
+  border-left: 1px solid rgba(46, 37, 102, .06);
+  border-right: 1px solid rgba(46, 37, 102, .06);
+  box-shadow: 0 2px 5px rgba(46, 37, 102, .08);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.section--program .tray--featured::after,
+.section--program .level::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(225deg, transparent 0 50%, rgba(46, 37, 102, .10) 50% 52%, #F2E7D5 53%);
+  pointer-events: none;
 }
 
 .section--program .tray--featured .tray__label,
@@ -5502,8 +5388,8 @@ details[open] .faq__mark::after {
 .section--program .level-list .level:nth-child(2),
 .section--program .level-list .level:nth-child(3),
 .section--program .level-list .level:nth-child(4) {
-  background: var(--paper);
-  border-color: rgba(46, 37, 102, .13);
+  background-color: #FFFDF7;
+  border-color: rgba(46, 37, 102, .14);
 }
 
 .section--program .level .level__tag {
@@ -5525,21 +5411,8 @@ details[open] .faq__mark::after {
 }
 
 /* ==========================================================================
-   Section details: planes, flight lines, trees and kids outside the cards.
+   Section details: planes, flight lines and trees outside the cards.
    ========================================================================== */
-
-.section-kid {
-  position: absolute;
-  z-index: 0;
-  margin: 0;
-  pointer-events: none;
-}
-
-.section-kid img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 .doodle--tree {
   color: var(--leaf);
@@ -5568,25 +5441,6 @@ details[open] .faq__mark::after {
   opacity: .68;
 }
 
-.program__kid {
-  top: 64px;
-  right: 2%;
-  width: 170px;
-  opacity: .94;
-}
-
-.section--join .shell {
-  position: relative;
-  z-index: 1;
-}
-
-.join__kid {
-  left: 2%;
-  bottom: 18px;
-  width: 170px;
-  opacity: .9;
-}
-
 .faq__tree {
   right: 3%;
   bottom: 26px;
@@ -5602,13 +5456,6 @@ details[open] .faq__mark::after {
   opacity: .44;
 }
 
-@media (max-width: 1200px) {
-  .program__kid,
-  .join__kid {
-    display: none;
-  }
-}
-
 @media (max-width: 760px) {
   .hero__flight,
   .hero__plane,
@@ -5619,5 +5466,10 @@ details[open] .faq__mark::after {
 
   .section--program + .section--join {
     padding-top: 28px;
+  }
+
+  .section--program .level-list {
+    height: auto;
+    grid-auto-rows: auto;
   }
 }
