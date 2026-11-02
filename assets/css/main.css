@@ -5065,3 +5065,109 @@ details[open] .faq__mark::after {
     bottom: 20px;
   }
 }
+
+/* ==========================================================================
+   Mobile pass
+   Keep the five-area section lively on small screens, protect the footer from
+   the floating WhatsApp button, and tighten the card rhythm.
+   ========================================================================== */
+
+.footer {
+  background: #4B2BA0;
+}
+
+@media (max-width: 760px) {
+  .section--areas .areas__flower,
+  .section--areas .areas__wave {
+    display: block;
+  }
+
+  .section--areas .areas__flower {
+    top: 18px;
+    right: 5%;
+    width: 30px;
+    opacity: .62;
+  }
+
+  .section--areas .areas__wave {
+    right: 1%;
+    bottom: 14px;
+    width: 102px;
+    opacity: .28;
+  }
+
+  .areas__star {
+    top: 17px;
+    left: auto;
+    right: 18%;
+    width: 22px;
+    opacity: .62;
+  }
+
+  .areas__cloud {
+    left: 4%;
+    bottom: 10px;
+    width: 52px;
+    opacity: .5;
+  }
+
+  .areas__grid {
+    gap: 14px;
+  }
+
+  .area__body {
+    padding: 20px 18px 22px;
+  }
+
+  .area__body h3 {
+    font-size: 1.35rem;
+  }
+
+  .area__body > p {
+    font-size: 14.5px;
+  }
+
+  .area__body > .area__home {
+    margin-top: 14px;
+    padding-top: 12px;
+    font-size: 13px;
+  }
+
+  .footer {
+    padding-bottom: 92px;
+  }
+
+  .footer__bottom {
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .section--areas .section-head {
+    margin-bottom: 22px;
+  }
+
+  .section--areas h2 {
+    font-size: clamp(1.8rem, 8.6vw, 2.2rem);
+  }
+
+  .areas__cloud {
+    width: 44px;
+  }
+
+  .area__art {
+    aspect-ratio: 16 / 10;
+  }
+
+  .area--practical .area__art {
+    aspect-ratio: 16 / 10;
+  }
+
+  .facility-slide {
+    flex-basis: min(82vw, 318px);
+  }
+
+  .footer {
+    padding-bottom: 88px;
+  }
+}
