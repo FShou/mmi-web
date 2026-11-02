@@ -5006,3 +5006,62 @@ details[open] .faq__mark::after {
     border-radius: 22px;
   }
 }
+
+/* Five areas: back to the original structure, with a vivid violet ground
+   and the doodles doing the decorative work. */
+.section--areas {
+  background: #6B3FD4;
+  overflow: clip;
+}
+
+.section--areas h2 {
+  color: var(--paper);
+}
+
+.section--areas .lede {
+  color: rgba(255, 255, 255, .84);
+}
+
+.section--areas .kicker {
+  color: #FFE58A;
+}
+
+.section--areas .areas__flower {
+  fill: #FFD45E;
+  opacity: .8;
+}
+
+.section--areas .areas__wave {
+  stroke: #FFE58A;
+  opacity: .42;
+}
+
+.areas__star {
+  top: 28px;
+  left: 2.5%;
+  width: 34px;
+  stroke: #FFE58A;
+  opacity: .8;
+}
+
+.areas__cloud {
+  bottom: 34px;
+  left: 2%;
+  width: 94px;
+  fill: rgba(255, 255, 255, .1);
+  stroke: rgba(255, 255, 255, .44);
+  stroke-width: 1.2;
+  opacity: .85;
+}
+
+@media (max-width: 760px) {
+  .areas__star {
+    top: 18px;
+    width: 26px;
+  }
+
+  .areas__cloud {
+    width: 64px;
+    bottom: 20px;
+  }
+}
