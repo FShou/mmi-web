@@ -3111,10 +3111,10 @@ details[open] .faq__mark::after {
 
 .hero__doodle {
   position: absolute;
-  left: -74px;
-  bottom: -6px;
+  left: -82px;
+  bottom: 23%;
   z-index: 0;
-  width: min(220px, 54%);
+  width: min(196px, 48%);
   margin: 0;
   pointer-events: none;
   transform: rotate(-3deg);
@@ -3304,7 +3304,8 @@ details[open] .faq__mark::after {
 @media (max-width: 980px) {
   .hero__doodle {
     left: -42px;
-    width: 190px;
+    bottom: 21%;
+    width: 164px;
   }
 
   .facility--dark .facility__body {
@@ -3886,5 +3887,551 @@ details[open] .faq__mark::after {
     top: 8%;
     right: 1%;
     width: 54px;
+  }
+}
+
+/* ==========================================================================
+   Brighter section system
+   The learning-environment section is the reference: tinted ground, clear
+   card shapes, and playful line art. Other sections get their own colour.
+   ========================================================================== */
+
+:root {
+  --sun: #F6C445;
+  --sun-soft: #FFF1C4;
+  --coral: #E9765B;
+  --coral-soft: #FDE2D9;
+  --sky: #5FB9DF;
+  --sky-soft: #DDF3FB;
+  --mint: #BFE8CB;
+  --mint-soft: #E1F5E8;
+  --lilac-soft: #EDE4FF;
+}
+
+.hero {
+  background: linear-gradient(128deg, #EFE6FF 0%, #FFF4DB 52%, #E2F7EA 100%);
+}
+
+.hero__deco .shape--dot-grid {
+  background-image: radial-gradient(var(--coral) 1.6px, transparent 1.6px);
+  opacity: .32;
+}
+
+.hero__deco .shape--quarter {
+  background: var(--sun);
+  opacity: .42;
+}
+
+.hero__deco .shape--arc {
+  border-color: color-mix(in srgb, var(--coral) 58%, transparent);
+}
+
+.hero__visual .photo__art {
+  background-color: #DCCBFF;
+}
+
+.only-badge {
+  background: #DDF6E6;
+  border-color: #9FDCB3;
+}
+
+.section--only {
+  background: #E1F5E8;
+}
+
+.section--only .shape--blob-large {
+  background: var(--mint);
+  opacity: .82;
+}
+
+.only__art {
+  background: var(--sun-soft);
+  border-color: #F0C55A;
+}
+
+.section--only .kicker {
+  color: var(--leaf-deep);
+}
+
+.section--values {
+  background: #FFF2DB;
+  overflow: clip;
+}
+
+.section--values .kicker {
+  color: #B65E00;
+}
+
+.panel--values {
+  background: #FFE7B6;
+  border-color: #F0C56A;
+}
+
+.panel--values .panel__kicker {
+  color: #9C5000;
+}
+
+.panel--values .daily li,
+.panel--values .panel__note {
+  border-top-color: rgba(120, 75, 0, .2);
+}
+
+.panel--values .panel__note {
+  color: #6B4A16;
+}
+
+.values__sun {
+  top: 32px;
+  right: 4%;
+  width: 56px;
+  stroke: #C87400;
+  opacity: .28;
+}
+
+.values__leaf {
+  bottom: 36px;
+  left: 2%;
+  width: 48px;
+  stroke: var(--leaf);
+  opacity: .3;
+}
+
+.section--program {
+  background: #E6F1FF;
+  padding-bottom: clamp(42px, 5vw, 64px);
+  overflow: clip;
+}
+
+.section--program + .section--facilities {
+  padding-top: clamp(52px, 6vw, 78px);
+}
+
+.section--program .kicker {
+  color: #4F33A5;
+}
+
+.tray--featured {
+  background: #FFD45E;
+  border-color: #EDB93C;
+}
+
+.tray--featured .tray__label,
+.tray--featured .tray__age {
+  color: #6D4500;
+}
+
+.tray--featured .text-link--dark {
+  color: #3A2600;
+}
+
+.tray--featured .tray__facts {
+  border-top-color: rgba(109, 69, 0, .25);
+}
+
+.tray--featured .tray__blocks span {
+  background: #7A4E00;
+}
+
+.program__star {
+  top: 40px;
+  left: 2.5%;
+  width: 36px;
+  stroke: #6A3FB0;
+  opacity: .35;
+}
+
+.program__wave {
+  right: 3%;
+  bottom: 26px;
+  width: 150px;
+  stroke: var(--leaf);
+  opacity: .22;
+}
+
+.level {
+  --level-accent: #2F6B4F;
+}
+
+.level:nth-child(1) {
+  --level-accent: #5B34A5;
+  background: #F1E7FF;
+  border-color: #DCC8FF;
+}
+
+.level:nth-child(2) {
+  --level-accent: #236142;
+  background: #E1F5E8;
+  border-color: #BCE6CB;
+}
+
+.level:nth-child(3) {
+  --level-accent: #8A5200;
+  background: #FFF0D2;
+  border-color: #F4D493;
+}
+
+.level:nth-child(4) {
+  --level-accent: #11647F;
+  background: #DFF3FB;
+  border-color: #B7E3F4;
+}
+
+.level .level__tag {
+  background: color-mix(in srgb, var(--level-accent) 16%, white);
+  color: var(--level-accent);
+}
+
+.level .level__age {
+  color: var(--level-accent);
+}
+
+.level:hover {
+  border-color: var(--level-accent);
+}
+
+.section--facilities {
+  background: #DDF4E5;
+}
+
+.section--facilities .kicker {
+  color: var(--leaf-deep);
+}
+
+.facility-slide--violet .facility-slide__art {
+  background-color: #DCCBFF;
+}
+
+.facility-slide--green .facility-slide__art {
+  background-color: #C9EDD6;
+}
+
+.facility-slide--paper .facility-slide__art {
+  background-color: #D9EFFF;
+}
+
+.facility-slide--wood .facility-slide__art {
+  background-color: #FFE0A8;
+}
+
+.section--areas {
+  background: #FFF3D0;
+  overflow: clip;
+}
+
+.section--areas .kicker {
+  color: #B05A2E;
+}
+
+.area {
+  --area-accent: var(--accent);
+}
+
+.area--practical {
+  --area-accent: #5B34A5;
+  background: #F1E7FF;
+  border-color: #DECBFA;
+}
+
+.area--sensorial {
+  --area-accent: #236142;
+  background: #E2F5E9;
+  border-color: #C3E8CF;
+}
+
+.area--language {
+  --area-accent: #B04E35;
+  background: #FFE7DE;
+  border-color: #F8C8B8;
+}
+
+.area--math {
+  --area-accent: #11647F;
+  background: #DFF2FB;
+  border-color: #B9E4F4;
+}
+
+.area--culture {
+  --area-accent: #8A6200;
+  background: #FFF0C7;
+  border-color: #F2D488;
+}
+
+.area--practical .area__art {
+  background-color: #E3D2FF;
+}
+
+.area--sensorial .area__art {
+  background-color: #C9EDD6;
+}
+
+.area--language .area__art {
+  background-color: #FFD4C5;
+}
+
+.area--math .area__art {
+  background-color: #C6EAF8;
+}
+
+.area--culture .area__art {
+  background-color: #FFE1A0;
+}
+
+.area__home-label {
+  color: var(--area-accent);
+}
+
+.area__home {
+  border-top-color: color-mix(in srgb, var(--area-accent) 20%, transparent);
+}
+
+.section--areas .areas__flower {
+  fill: var(--coral);
+}
+
+.section--areas .areas__wave {
+  stroke: #B06A00;
+  opacity: .22;
+}
+
+.section--join {
+  background: #E2F2FF;
+  overflow: clip;
+}
+
+.section--join .kicker {
+  color: #12627D;
+}
+
+.join__steps {
+  display: grid;
+  gap: 14px;
+}
+
+.join__steps li {
+  grid-template-columns: 56px minmax(0, 1fr);
+  padding: 22px 24px;
+  border: 1px solid #C7E3F5;
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 14px 28px -30px rgba(46, 37, 102, .35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.join__steps li:nth-child(1) {
+  --step-accent: #D85F43;
+}
+
+.join__steps li:nth-child(2) {
+  --step-accent: #2F6B4F;
+}
+
+.join__steps li:nth-child(3) {
+  --step-accent: #11647F;
+}
+
+.join__steps li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px -28px rgba(46, 37, 102, .45);
+}
+
+.join__steps li:last-child {
+  border-bottom: 1px solid #C7E3F5;
+}
+
+.join__num {
+  color: var(--step-accent, var(--accent));
+}
+
+.join__plane {
+  top: 38px;
+  right: 4%;
+  width: 48px;
+  stroke: #11647F;
+  opacity: .5;
+  transform: rotate(-10deg);
+}
+
+.join__cloud {
+  bottom: 44px;
+  left: 2%;
+  width: 86px;
+  fill: #fff;
+  stroke: #8DCBE4;
+  opacity: .75;
+}
+
+.trust {
+  background: var(--ink);
+  border: 0;
+}
+
+.trust__item {
+  color: var(--mist);
+}
+
+.trust__item .icon {
+  color: var(--sun);
+}
+
+.section--faq {
+  background: #F0E7FF;
+  overflow: clip;
+}
+
+.section--faq .kicker {
+  color: #5B34A5;
+}
+
+.faq__list {
+  display: grid;
+  gap: 10px;
+  border-top: 0;
+}
+
+.faq__list details {
+  padding: 0 18px;
+  border: 1px solid #DCCBF8;
+  border-radius: 16px;
+  background: var(--paper);
+}
+
+.faq__list details[open] {
+  border-color: #B792F2;
+  box-shadow: 0 16px 28px -30px rgba(46, 37, 102, .4);
+}
+
+.faq__list summary {
+  padding: 17px 0;
+}
+
+.faq__list details > p {
+  padding: 0 0 18px;
+}
+
+.faq__ball {
+  top: 44px;
+  right: 4%;
+  width: 34px;
+  stroke: #6A3FB0;
+  opacity: .38;
+}
+
+.faq__flower {
+  bottom: 36px;
+  left: 2%;
+  width: 42px;
+  fill: #B792F2;
+  opacity: .4;
+}
+
+.section--cta {
+  background: #FFF2D0;
+}
+
+.cta {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(246, 196, 69, .2), transparent 30%),
+    linear-gradient(135deg, #2E2566 0%, #43308A 100%);
+}
+
+.location__copy {
+  background: #FFF9EC;
+  border-color: #F0D9A2;
+}
+
+.location__copy .kicker {
+  color: #966000;
+}
+
+.doodle--star,
+.doodle--ball,
+.doodle--plane {
+  fill: none;
+  stroke: var(--leaf);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 760px) {
+  .values__sun,
+  .program__star,
+  .join__plane,
+  .faq__ball {
+    width: 28px;
+  }
+
+  .join__steps li {
+    padding: 18px;
+    grid-template-columns: 46px minmax(0, 1fr);
+  }
+
+  .faq__list details {
+    padding: 0 14px;
+  }
+}
+
+/* The "only one" visual is a real photo slot again. The teacher drawing sits
+   outside the frame as decoration, never inside the placeholder. */
+.only__visual {
+  position: relative;
+  margin: 0;
+  padding-bottom: 22px;
+}
+
+.only__visual .photo {
+  position: relative;
+  z-index: 1;
+}
+
+.only__visual .photo__art {
+  aspect-ratio: 4 / 5;
+  border-radius: 30px 30px 30px 150px;
+  background-color: #DCCBFF;
+}
+
+.only__doodle {
+  position: absolute;
+  left: -72px;
+  bottom: -8px;
+  z-index: 0;
+  width: min(190px, 46%);
+  margin: 0;
+  pointer-events: none;
+  transform: rotate(-3deg);
+}
+
+.only__doodle img {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+@media (max-width: 980px) {
+  .only__doodle {
+    left: -24px;
+    width: 138px;
+  }
+}
+
+@media (max-width: 760px) {
+  .only__visual {
+    padding-bottom: 0;
+  }
+
+  .only__visual .photo__art {
+    aspect-ratio: 16 / 10;
+    border-radius: 28px;
+  }
+
+  .only__doodle {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .only__doodle img {
+    animation: none;
   }
 }
