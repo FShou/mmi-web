@@ -5430,9 +5430,15 @@ details[open] .faq__mark::after {
 
 .join__kid {
   left: 2%;
-  bottom: 18px;
-  width: 170px;
-  opacity: .9;
+  bottom: clamp(18px, 2vw, 32px);
+  width: clamp(240px, 26vw, 380px);
+  opacity: .95;
+}
+
+@media (min-width: 1201px) {
+  .section--join {
+    padding-bottom: clamp(170px, 17vw, 240px);
+  }
 }
 
 .doodle--tree {
