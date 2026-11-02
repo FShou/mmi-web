@@ -5373,3 +5373,70 @@ details[open] .faq__mark::after {
 .section--program + .section--join {
   padding-top: clamp(52px, 6vw, 78px);
 }
+
+/* ==========================================================================
+   Hero, simplified: flat ground, one solid colour block, no floating doodles.
+   ========================================================================== */
+
+.hero {
+  background: #F3EEFF;
+}
+
+.hero__copy h1 {
+  max-width: 16ch;
+}
+
+.hero .only-badge {
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--ink-mute);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero .only-badge__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--coral);
+}
+
+.hero__visual::before {
+  inset: 28px -16px -16px 34px;
+  z-index: 0;
+  border: 0;
+  border-radius: 28px;
+  background: var(--sun);
+  transform: none;
+  display: block;
+}
+
+.hero__visual .photo__art,
+.photo--hero .photo__art {
+  background-color: #E2D1FF;
+  border-radius: 28px;
+  box-shadow: 0 22px 38px -34px rgba(46, 37, 102, .42);
+}
+
+.hero__meta::before {
+  background: var(--coral);
+}
+
+@media (max-width: 760px) {
+  .hero__visual::before {
+    inset: 18px -8px -12px 18px;
+    border-radius: 22px;
+    display: block;
+  }
+
+  .hero__visual .photo__art,
+  .photo--hero .photo__art {
+    border-radius: 22px;
+  }
+}
