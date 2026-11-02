@@ -5171,3 +5171,205 @@ details[open] .faq__mark::after {
     padding-bottom: 88px;
   }
 }
+
+/* ==========================================================================
+   Programme section: moved below the five areas and brightened.
+   ========================================================================== */
+
+.section--program {
+  background: #FFE1EC;
+  overflow: clip;
+}
+
+.section--program .kicker {
+  color: #A33A66;
+}
+
+.program__star {
+  stroke: #A33A66;
+  opacity: .5;
+}
+
+.program__wave {
+  stroke: var(--leaf);
+  opacity: .32;
+}
+
+.tray--featured {
+  background: #FFD45E;
+  border-color: #EDB93C;
+}
+
+.tray--featured .tray__label,
+.tray--featured .tray__age {
+  color: #6D4500;
+}
+
+.tray--featured .text-link--dark {
+  color: #3A2600;
+}
+
+.tray--featured .tray__facts {
+  border-top-color: rgba(109, 69, 0, .25);
+}
+
+.tray--featured .tray__blocks span {
+  background: #7A4E00;
+}
+
+.level:nth-child(1) {
+  --level-accent: #5B34A5;
+  background: #F1E7FF;
+  border-color: #DCC8FF;
+}
+
+.level:nth-child(2) {
+  --level-accent: #236142;
+  background: #E1F5E8;
+  border-color: #BCE6CB;
+}
+
+.level:nth-child(3) {
+  --level-accent: #8A5200;
+  background: #FFF0D2;
+  border-color: #F4D493;
+}
+
+.level:nth-child(4) {
+  --level-accent: #11647F;
+  background: #DFF3FB;
+  border-color: #B7E3F4;
+}
+
+.level .level__tag {
+  background: color-mix(in srgb, var(--level-accent) 16%, white);
+  color: var(--level-accent);
+}
+
+.level .level__age {
+  color: var(--level-accent);
+}
+
+.level:hover {
+  border-color: var(--level-accent);
+}
+
+/* ==========================================================================
+   Hero: bring back a little colour and hand-made energy without putting
+   decoration inside the photo placeholder.
+   ========================================================================== */
+
+.hero {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(106, 63, 176, .10), transparent 34%),
+    radial-gradient(circle at 92% 8%, rgba(246, 196, 69, .18), transparent 32%),
+    linear-gradient(130deg, #F4ECFF 0%, #FFF8E7 55%, #E9F8EF 100%);
+}
+
+.hero__accent {
+  background-image: linear-gradient(180deg, transparent 58%, #F7D77C 58%, #F7D77C 90%, transparent 90%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.hero__visual .photo {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__visual::before {
+  content: "";
+  position: absolute;
+  inset: 22px -12px -16px 28px;
+  z-index: 0;
+  border: 1.5px dashed color-mix(in srgb, var(--accent) 34%, transparent);
+  border-radius: 220px 220px 34px 34px;
+  transform: rotate(2deg);
+  pointer-events: none;
+}
+
+.hero__visual .photo__art {
+  background-color: #E2D1FF;
+}
+
+.hero__flower {
+  fill: var(--coral);
+  opacity: .5;
+}
+
+.hero__wave {
+  stroke: var(--accent);
+  opacity: .3;
+}
+
+.hero__meta::before {
+  background: var(--coral);
+}
+
+.hero__star {
+  top: -16px;
+  right: -10px;
+  z-index: 2;
+  width: 34px;
+  stroke: var(--coral);
+  opacity: .9;
+}
+
+.hero__blocks {
+  position: absolute;
+  left: -26px;
+  bottom: 74px;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.hero__blocks span {
+  display: block;
+  width: 13px;
+  border-radius: 4px 4px 2px 2px;
+  box-shadow: 0 8px 14px -12px rgba(46, 37, 102, .5);
+}
+
+.hero__blocks span:nth-child(1) {
+  height: 17px;
+  background: var(--coral);
+  transform: rotate(-4deg);
+}
+
+.hero__blocks span:nth-child(2) {
+  height: 29px;
+  background: var(--sun);
+  transform: rotate(2deg);
+}
+
+.hero__blocks span:nth-child(3) {
+  height: 22px;
+  background: var(--leaf);
+  transform: rotate(5deg);
+}
+
+@media (max-width: 980px) {
+  .hero__blocks {
+    left: -14px;
+    bottom: 68px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero__visual::before,
+  .hero__blocks {
+    display: none;
+  }
+
+  .hero__star {
+    top: -10px;
+    right: 0;
+    width: 25px;
+  }
+}
+
+.section--program + .section--join {
+  padding-top: clamp(52px, 6vw, 78px);
+}
