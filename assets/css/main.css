@@ -4763,3 +4763,246 @@ details[open] .faq__mark::after {
     font-size: clamp(1.5rem, 8vw, 2rem);
   }
 }
+
+/* ==========================================================================
+   Five Montessori areas: cheerful, concrete, and closer to the facility row.
+   ========================================================================== */
+
+.section--areas {
+  background: #FFF1C6;
+  overflow: clip;
+}
+
+.section--areas .section-head {
+  margin-bottom: clamp(24px, 3vw, 36px);
+}
+
+.section--areas .kicker {
+  color: #9A5A00;
+}
+
+.areas__path {
+  margin-bottom: clamp(26px, 3.5vw, 42px);
+  padding: 16px 20px 18px;
+  border: 1px solid #F0D58C;
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 16px 30px -32px rgba(46, 37, 102, .34);
+}
+
+.areas__path-label {
+  margin-bottom: 12px;
+  color: #8A6200;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.areas__path-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.areas__path-list::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  right: 6%;
+  border-top: 1.5px dashed rgba(138, 98, 0, .3);
+  z-index: 0;
+}
+
+.areas__path-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--paper);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.areas__path-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .68);
+}
+
+.areas__path-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.areas__path-item--practical {
+  border-color: #DCC8FF;
+  background: #F1E7FF;
+  color: #5B34A5;
+}
+
+.areas__path-item--sensorial {
+  border-color: #BCE6CB;
+  background: #E2F5E9;
+  color: #236142;
+}
+
+.areas__path-item--language {
+  border-color: #F8C8B8;
+  background: #FFE7DE;
+  color: #B04E35;
+}
+
+.areas__path-item--math {
+  border-color: #B9E4F4;
+  background: #DFF2FB;
+  color: #11647F;
+}
+
+.areas__path-item--culture {
+  border-color: #F2D488;
+  background: #FFF0C7;
+  color: #7A5700;
+}
+
+.area {
+  --area-accent: var(--accent);
+  box-shadow: 0 18px 36px -38px rgba(46, 37, 102, .4);
+}
+
+.area--practical {
+  --area-accent: #5B34A5;
+  background: #F1E7FF;
+  border-color: #DECBFA;
+  border-radius: 30px 30px 30px 92px;
+}
+
+.area--sensorial {
+  --area-accent: #236142;
+  background: #E2F5E9;
+  border-color: #C3E8CF;
+  border-radius: 30px 92px 30px 30px;
+}
+
+.area--language {
+  --area-accent: #B04E35;
+  background: #FFE7DE;
+  border-color: #F8C8B8;
+  border-radius: 26px 26px 26px 72px;
+}
+
+.area--math {
+  --area-accent: #11647F;
+  background: #DFF2FB;
+  border-color: #B9E4F4;
+  border-radius: 26px 26px 72px 26px;
+}
+
+.area--culture {
+  --area-accent: #7A5700;
+  background: #FFF0C7;
+  border-color: #F2D488;
+  border-radius: 26px 72px 26px 26px;
+}
+
+.area--practical .area__art {
+  background-color: #E3D2FF;
+}
+
+.area--sensorial .area__art {
+  background-color: #C9EDD6;
+}
+
+.area--language .area__art {
+  background-color: #FFD4C5;
+}
+
+.area--math .area__art {
+  background-color: #C6EAF8;
+}
+
+.area--culture .area__art {
+  background-color: #FFE1A0;
+}
+
+.area__num {
+  background: color-mix(in srgb, var(--area-accent) 14%, white);
+  color: var(--area-accent);
+}
+
+.area__home-label {
+  color: var(--area-accent);
+}
+
+.area__home {
+  border-top-color: color-mix(in srgb, var(--area-accent) 24%, transparent);
+}
+
+.area:hover {
+  border-color: var(--area-accent);
+  box-shadow: 0 24px 42px -34px rgba(46, 37, 102, .45);
+}
+
+.section--areas .areas__flower {
+  fill: var(--coral);
+}
+
+.section--areas .areas__wave {
+  stroke: #B06A00;
+  opacity: .26;
+}
+
+@media (max-width: 980px) {
+  .areas__path-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .areas__path-list::before {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .areas__path {
+    padding: 14px;
+  }
+
+  .areas__path-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .areas__path-item {
+    justify-content: flex-start;
+  }
+
+  .area--practical,
+  .area--sensorial,
+  .area--language,
+  .area--math,
+  .area--culture {
+    border-radius: 22px;
+  }
+}
