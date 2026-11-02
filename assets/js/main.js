@@ -203,6 +203,137 @@
     });
   });
 
+  /* Facility carousel: a curved, swipeable row of placeholder cards. */
+  var carousel = document.querySelector("[data-carousel]");
+  if (carousel) {
+    var carouselViewport = carousel.querySelector(".facility-carousel__viewport");
+    var carouselTrack = carousel.querySelector("[data-carousel-track]");
+    var carouselSlides = carouselTrack ? Array.prototype.slice.call(carouselTrack.querySelectorAll("[data-slide]")) : [];
+    var carouselPrev = carousel.querySelector("[data-carousel-prev]");
+    var carouselNext = carousel.querySelector("[data-carousel-next]");
+    var carouselCurrent = carousel.querySelector("[data-carousel-current]");
+    var carouselIndex = 0;
+    var swipeStartX = null;
+    var swipeStartY = null;
+
+    function padNumber(value) {
+      return value < 10 ? "0" + value : String(value);
+    }
+
+    function layoutCarousel() {
+      if (!carouselViewport || !carouselTrack || !carouselSlides.length) {
+        return;
+      }
+
+      var trackStyle = window.getComputedStyle(carouselTrack);
+      var gap = parseFloat(trackStyle.columnGap || trackStyle.gap) || 24;
+      var cardWidth = carouselSlides[0].offsetWidth;
+      var center = (carouselViewport.clientWidth - cardWidth) / 2;
+      var compact = window.matchMedia("(max-width: 760px)").matches;
+
+      carouselTrack.style.transform = "translate3d(" + (center - carouselIndex * (cardWidth + gap)) + "px, 0, 0)";
+
+      carouselSlides.forEach(function (slide, slideIndex) {
+        var offset = slideIndex - carouselIndex;
+        var distance = Math.abs(offset);
+
+        slide.classList.toggle("is-active", offset === 0);
+        slide.style.setProperty("--slide-y", (compact ? distance * 8 : distance * 16 + distance * distance * 10) + "px");
+        slide.style.setProperty("--slide-rotate", (compact ? 0 : offset * 1.8) + "deg");
+        slide.style.setProperty("--slide-scale", compact ? "1" : String(Math.max(0.84, 1 - distance * 0.045)));
+        slide.style.zIndex = String(10 - distance);
+        slide.setAttribute("aria-hidden", distance > 2 ? "true" : "false");
+      });
+
+      if (carouselCurrent) {
+        carouselCurrent.textContent = padNumber(carouselIndex + 1);
+      }
+
+      if (carouselPrev) {
+        carouselPrev.disabled = carouselIndex === 0;
+      }
+
+      if (carouselNext) {
+        carouselNext.disabled = carouselIndex === carouselSlides.length - 1;
+      }
+    }
+
+    function goToSlide(nextIndex) {
+      carouselIndex = Math.max(0, Math.min(carouselSlides.length - 1, nextIndex));
+      layoutCarousel();
+    }
+
+    if (carouselPrev) {
+      carouselPrev.addEventListener("click", function () {
+        goToSlide(carouselIndex - 1);
+      });
+    }
+
+    if (carouselNext) {
+      carouselNext.addEventListener("click", function () {
+        goToSlide(carouselIndex + 1);
+      });
+    }
+
+    carouselSlides.forEach(function (slide, slideIndex) {
+      slide.addEventListener("click", function () {
+        goToSlide(slideIndex);
+      });
+    });
+
+    carousel.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        goToSlide(carouselIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        goToSlide(carouselIndex + 1);
+      }
+    });
+
+    if (carouselViewport) {
+      carouselViewport.addEventListener("pointerdown", function (event) {
+        if (event.pointerType === "mouse") {
+          return;
+        }
+        swipeStartX = event.clientX;
+        swipeStartY = event.clientY;
+      });
+
+      carouselViewport.addEventListener("pointerup", function (event) {
+        if (swipeStartX === null) {
+          return;
+        }
+
+        var deltaX = event.clientX - swipeStartX;
+        var deltaY = event.clientY - swipeStartY;
+
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+          goToSlide(carouselIndex + (deltaX < 0 ? 1 : -1));
+        }
+
+        swipeStartX = null;
+        swipeStartY = null;
+      });
+
+      carouselViewport.addEventListener("pointercancel", function () {
+        swipeStartX = null;
+        swipeStartY = null;
+      });
+    }
+
+    window.addEventListener("resize", function () {
+      window.requestAnimationFrame(layoutCarousel);
+    });
+
+    layoutCarousel();
+    window.addEventListener("load", layoutCarousel);
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(layoutCarousel);
+    }
+  }
+
   var stored = readStoredLang();
   setLang(stored || "id", false);
 
