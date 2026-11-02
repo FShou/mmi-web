@@ -4435,3 +4435,220 @@ details[open] .faq__mark::after {
     animation: none;
   }
 }
+
+/* ==========================================================================
+   Colour correction: keep the brighter treatment only where it was approved.
+   Facilities, How to Join, FAQ, trust, CTA and footer stay colourful.
+   Hero, only-one, values, programme and areas return to the original palette.
+   ========================================================================== */
+
+.hero {
+  background: var(--mist);
+}
+
+.hero__deco .shape--dot-grid {
+  background-image: radial-gradient(var(--accent) 1.6px, transparent 1.6px);
+  opacity: .28;
+}
+
+.hero__deco .shape--quarter {
+  background: var(--leaf-soft);
+  opacity: .8;
+}
+
+.hero__deco .shape--arc {
+  border-color: color-mix(in srgb, var(--accent) 36%, transparent);
+}
+
+.hero__visual .photo__art {
+  background-color: #E8E0F5;
+}
+
+.only-badge {
+  background: var(--leaf-soft);
+  border-color: color-mix(in srgb, var(--leaf) 26%, transparent);
+}
+
+.section--only {
+  background: var(--mist);
+}
+
+.section--only .shape--blob-large {
+  background: var(--leaf-soft);
+  opacity: .55;
+}
+
+.only__visual .photo__art {
+  background-color: #E8E0F5;
+}
+
+.section--values {
+  background: var(--paper);
+}
+
+.section--values .kicker {
+  color: var(--accent);
+}
+
+.panel--values {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.panel--values .panel__kicker {
+  color: var(--accent);
+}
+
+.panel--values .daily li,
+.panel--values .panel__note {
+  border-top-color: var(--line);
+}
+
+.panel--values .panel__note {
+  color: var(--ink-mute);
+}
+
+.section--program {
+  background: var(--mist);
+}
+
+.section--program .kicker {
+  color: var(--accent);
+}
+
+.tray--featured {
+  background: var(--wood-soft);
+  border-color: transparent;
+}
+
+.tray--featured .tray__label,
+.tray--featured .tray__age {
+  color: var(--accent);
+}
+
+.tray--featured .text-link--dark {
+  color: var(--ink);
+}
+
+.tray--featured .tray__facts {
+  border-top-color: var(--line);
+}
+
+.tray--featured .tray__blocks span {
+  background: var(--accent);
+}
+
+.level {
+  --level-accent: var(--leaf);
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.level:nth-child(1),
+.level:nth-child(2),
+.level:nth-child(3),
+.level:nth-child(4) {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.level .level__tag {
+  background: var(--leaf-soft);
+  color: var(--leaf-deep);
+}
+
+.level .level__age {
+  color: var(--leaf);
+}
+
+.level:hover {
+  border-color: color-mix(in srgb, var(--leaf) 30%, transparent);
+}
+
+.section--areas {
+  background: var(--paper);
+}
+
+.section--areas .kicker {
+  color: var(--accent);
+}
+
+.area {
+  --area-accent: var(--accent);
+  background: var(--mist);
+  border-color: var(--line);
+}
+
+.area--practical,
+.area--sensorial,
+.area--language,
+.area--culture {
+  background: var(--mist);
+  border-color: var(--line);
+}
+
+.area--math {
+  background: var(--accent-soft);
+  border-color: var(--line);
+}
+
+.area--practical .area__art,
+.area--sensorial .area__art,
+.area--language .area__art,
+.area--culture .area__art {
+  background-color: var(--mist);
+}
+
+.area--math .area__art {
+  background-color: var(--accent-soft);
+}
+
+.area__home-label {
+  color: var(--accent);
+}
+
+.area__home {
+  border-top-color: var(--line);
+}
+
+.section--areas .areas__flower {
+  fill: var(--leaf);
+}
+
+.section--areas .areas__wave {
+  stroke: var(--leaf);
+  opacity: .3;
+}
+
+/* Hero illustration now lives below the caption, in reserved space. */
+.hero__visual {
+  padding-bottom: clamp(108px, 10vw, 142px);
+}
+
+.hero__doodle {
+  left: -28px;
+  bottom: 0;
+  width: min(178px, 44%);
+}
+
+@media (max-width: 980px) {
+  .hero__visual {
+    padding-bottom: 96px;
+  }
+
+  .hero__doodle {
+    left: -18px;
+    bottom: 2px;
+    width: 142px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero__visual {
+    padding-bottom: 0;
+  }
+
+  .hero__doodle {
+    display: none;
+  }
+}
