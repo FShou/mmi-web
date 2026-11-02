@@ -64,6 +64,10 @@
     <symbol id="i-beads" viewBox="0 0 64 64"><path d="M10 20h44M10 32h44M10 44h44"/><circle cx="20" cy="20" r="3.2"/><circle cx="31" cy="20" r="3.2"/><circle cx="43" cy="20" r="3.2"/><circle cx="25" cy="32" r="3.2"/><circle cx="39" cy="32" r="3.2"/><circle cx="50" cy="32" r="3.2"/><circle cx="16" cy="44" r="3.2"/><circle cx="30" cy="44" r="3.2"/><circle cx="45" cy="44" r="3.2"/></symbol>
     <symbol id="i-globe" viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><path d="M12 32h40M32 12c6 6 9 12.5 9 20s-3 14-9 20c-6-6-9-12.5-9-20s3-14 9-20Z"/><path d="M15 20h34M15 44h34"/></symbol>
     <symbol id="i-building" viewBox="0 0 64 64"><path d="M10 54h44M16 54V22l16-8 16 8v32"/><path d="M26 54V40h12v14M24 28h6M34 28h6M24 34h6M34 34h6"/></symbol>
+    <symbol id="d-flower" viewBox="0 0 64 64"><circle cx="32" cy="14" r="9"/><circle cx="50" cy="32" r="9"/><circle cx="32" cy="50" r="9"/><circle cx="14" cy="32" r="9"/><circle cx="32" cy="32" r="5"/></symbol>
+    <symbol id="d-leaf" viewBox="0 0 64 64"><path d="M14 50C20 26 39 12 52 12c0 15-10 36-34 40"/><path d="M18 46c8-8 17-15 28-22"/></symbol>
+    <symbol id="d-wave" viewBox="0 0 96 24"><path d="M2 7c8-6 16-6 24 0s16 6 24 0 16-6 24 0 16 6 24 0"/><path d="M2 15c8-6 16-6 24 0s16 6 24 0 16-6 24 0 16 6 24 0" opacity=".55"/><path d="M2 23c8-6 16-6 24 0s16 6 24 0 16-6 24 0 16 6 24 0" opacity=".3"/></symbol>
+    <symbol id="d-sun" viewBox="0 0 64 64"><circle cx="32" cy="32" r="10"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8M12 12l6 6M46 46l6 6M52 12l-6 6M18 46l-6 6"/></symbol>
   </svg>
 
   <header class="site-header" id="top">
@@ -105,6 +109,8 @@
         <span class="shape shape--arc"></span>
         <span class="shape shape--quarter"></span>
         <span class="shape shape--ring"></span>
+        <svg class="doodle doodle--flower hero__flower"><use href="#d-flower"/></svg>
+        <svg class="doodle doodle--wave hero__wave"><use href="#d-wave"/></svg>
       </div>
       <div class="shell hero__grid">
         <div class="hero__copy">
@@ -124,16 +130,25 @@
           <p class="hero__meta"><span class="lang-id">Banjarmasin, Kalimantan Selatan · 18 bulan sampai 6,5 tahun</span><span class="lang-en">Banjarmasin, South Kalimantan · 18 months to 6.5 years</span></p>
         </div>
 
-        <figure class="deco deco--hero">
-          <span class="shape shape--cloud" aria-hidden="true"></span>
-          <span class="shape shape--spring" aria-hidden="true"></span>
-          <img class="deco__img" src="assets/illustrations/children.svg" alt="Ilustrasi dekoratif tiga anak bermain dan bergerak bersama" loading="lazy">
-        </figure>
+        <div class="hero__visual">
+          <figure class="photo photo--hero">
+            <div class="photo__art photo__art--violet" role="img" aria-label="Rak rendah Montessori dengan bahan belajar, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-shelf"/></svg>
+              <span class="shape shape--dots-light" aria-hidden="true"></span>
+              <span class="shape shape--ring" aria-hidden="true"></span>
+            </div>
+            <figcaption><span class="lang-id">Rak rendah, satu tugas per baki, semua dalam jangkauan anak.</span><span class="lang-en">Low shelves, one task per tray, everything within a child's reach.</span></figcaption>
+          </figure>
+          <figure class="hero__doodle" aria-hidden="true">
+            <img src="assets/illustrations/children.svg" alt="">
+          </figure>
+        </div>
       </div>
 
       <div class="shell shelf-block">
         <div class="shelf-block__head">
-          <p class="shelf-block__prompt" id="block-prompt"><span class="lang-id">Sepuluh hal kecil tentang kelas kami.</span><span class="lang-en">Ten small facts about our classroom.</span></p>
+          <p class="shelf-block__prompt" id="block-prompt"><span class="lang-id">Sepuluh hal inti tentang Montessori MMI.</span><span class="lang-en">Ten core facts about MMI Montessori.</span></p>
           <p class="shelf-block__count" aria-hidden="true">01 - 10</p>
         </div>
         <div class="block-shelf" role="group" aria-labelledby="block-prompt">
@@ -167,6 +182,7 @@
 
     <section class="section section--only" id="mengapa" data-reveal>
       <div class="shape shape--blob-large" aria-hidden="true"></div>
+      <svg class="doodle doodle--flower only__flower" aria-hidden="true"><use href="#d-flower"/></svg>
       <div class="shell only">
         <div class="only__copy">
           <p class="kicker kicker--leaf"><span class="lang-id">Satu-satunya di Banjarmasin</span><span class="lang-en">The only one in Banjarmasin</span></p>
@@ -323,6 +339,7 @@
     </section>
 
     <section class="section section--facilities" id="fasilitas">
+      <svg class="doodle doodle--sun facilities__sun" aria-hidden="true"><use href="#d-sun"/></svg>
       <div class="shell">
         <div class="section-head section-head--split" data-reveal>
           <div>
@@ -334,9 +351,11 @@
 
         <div class="facilities__grid">
           <article class="facility facility--large" data-reveal>
-            <div class="facility__art">
+            <div class="facility__art" role="img" aria-label="Ruang kerja Montessori, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-shelf"/></svg>
               <span class="shape shape--arc-soft" aria-hidden="true"></span>
-              <img src="assets/illustrations/children.svg" alt="Ilustrasi dekoratif anak-anak belajar bersama" loading="lazy">
+              <span class="shape shape--dots-light" aria-hidden="true"></span>
             </div>
             <div class="facility__body">
               <h3><span class="lang-id">Ruang kerja</span><span class="lang-en">Work space</span></h3>
@@ -345,9 +364,10 @@
           </article>
 
           <article class="facility facility--green" data-reveal>
-            <div class="facility__art">
+            <div class="facility__art" role="img" aria-label="Pojok baca, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-letter"/></svg>
               <span class="shape shape--dots-dark" aria-hidden="true"></span>
-              <img src="assets/illustrations/reading.svg" alt="Ilustrasi dekoratif anak membaca buku" loading="lazy">
             </div>
             <div class="facility__body">
               <h3><span class="lang-id">Pojok baca</span><span class="lang-en">Reading corner</span></h3>
@@ -356,9 +376,10 @@
           </article>
 
           <article class="facility facility--green" data-reveal>
-            <div class="facility__art">
+            <div class="facility__art" role="img" aria-label="Area eksplorasi, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-globe"/></svg>
               <span class="shape shape--blob-right" aria-hidden="true"></span>
-              <img src="assets/illustrations/science.svg" alt="Ilustrasi dekoratif anak melakukan percobaan" loading="lazy">
             </div>
             <div class="facility__body">
               <h3><span class="lang-id">Eksplorasi</span><span class="lang-en">Exploration</span></h3>
@@ -367,9 +388,10 @@
           </article>
 
           <article class="facility facility--green" data-reveal>
-            <div class="facility__art">
+            <div class="facility__art" role="img" aria-label="Area bergerak, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-tower"/></svg>
               <span class="shape shape--spring" aria-hidden="true"></span>
-              <img src="assets/illustrations/play.svg" alt="Ilustrasi dekoratif anak bermain" loading="lazy">
             </div>
             <div class="facility__body">
               <h3><span class="lang-id">Area bergerak</span><span class="lang-en">Movement area</span></h3>
@@ -378,6 +400,7 @@
           </article>
 
           <article class="facility facility--dark" data-reveal>
+            <img class="facility__doodle" src="assets/illustrations/reading.svg" alt="" aria-hidden="true" loading="lazy">
             <div class="facility__body">
               <h3><span class="lang-id">Fasilitas lainnya</span><span class="lang-en">Other facilities</span></h3>
               <p><span class="lang-id">Daftar fasilitas dan foto unit Banjarmasin belum dipublikasikan. Lihat langsung saat kunjungan.</span><span class="lang-en">The Banjarmasin facilities list and photos are not published yet. See them directly during your visit.</span></p>
@@ -404,9 +427,10 @@
 
         <div class="areas__grid">
           <article class="area area--practical" data-reveal>
-            <div class="area__art" aria-hidden="true">
-              <svg class="area__icon"><use href="#i-jug"/></svg>
-              <span class="shape shape--dots-light"></span>
+            <div class="area__art" role="img" aria-label="Kegiatan menuang air, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-jug"/></svg>
+              <span class="shape shape--dots-light" aria-hidden="true"></span>
             </div>
             <div class="area__body">
               <h3><span class="lang-id">Kegiatan sehari-hari</span><span class="lang-en">Practical life</span></h3>
@@ -416,9 +440,10 @@
           </article>
 
           <article class="area area--sensorial" data-reveal>
-            <div class="area__art" aria-hidden="true">
-              <svg class="area__icon"><use href="#i-tower"/></svg>
-              <span class="shape shape--blob-right"></span>
+            <div class="area__art" role="img" aria-label="Material indra, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-tower"/></svg>
+              <span class="shape shape--blob-right" aria-hidden="true"></span>
             </div>
             <div class="area__body">
               <h3><span class="lang-id">Material indra</span><span class="lang-en">Sensorial</span></h3>
@@ -428,9 +453,10 @@
           </article>
 
           <article class="area area--language" data-reveal>
-            <div class="area__art" aria-hidden="true">
-              <svg class="area__icon"><use href="#i-letter"/></svg>
-              <span class="shape shape--ring shape--ring-soft"></span>
+            <div class="area__art" role="img" aria-label="Huruf pasir dan cerita, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-letter"/></svg>
+              <span class="shape shape--ring shape--ring-soft" aria-hidden="true"></span>
             </div>
             <div class="area__body">
               <h3><span class="lang-id">Bahasa</span><span class="lang-en">Language</span></h3>
@@ -440,9 +466,10 @@
           </article>
 
           <article class="area area--math" data-reveal>
-            <div class="area__art" aria-hidden="true">
-              <svg class="area__icon"><use href="#i-beads"/></svg>
-              <span class="shape shape--dots-light"></span>
+            <div class="area__art" role="img" aria-label="Manik-manik hitung, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-beads"/></svg>
+              <span class="shape shape--dots-light" aria-hidden="true"></span>
             </div>
             <div class="area__body">
               <h3><span class="lang-id">Matematika</span><span class="lang-en">Mathematics</span></h3>
@@ -452,9 +479,10 @@
           </article>
 
           <article class="area area--culture" data-reveal>
-            <div class="area__art" aria-hidden="true">
-              <svg class="area__icon"><use href="#i-globe"/></svg>
-              <span class="shape shape--arc-soft"></span>
+            <div class="area__art" role="img" aria-label="Globe dan peta, foto menyusul">
+              <span class="photo__tag"><span class="lang-id">Foto menyusul</span><span class="lang-en">Photo to come</span></span>
+              <svg class="photo__icon" aria-hidden="true"><use href="#i-globe"/></svg>
+              <span class="shape shape--arc-soft" aria-hidden="true"></span>
             </div>
             <div class="area__body">
               <h3><span class="lang-id">Budaya dan dunia</span><span class="lang-en">Culture and the world</span></h3>
@@ -463,10 +491,13 @@
             </div>
           </article>
         </div>
+        <svg class="doodle doodle--flower areas__flower" aria-hidden="true"><use href="#d-flower"/></svg>
+        <svg class="doodle doodle--wave areas__wave" aria-hidden="true"><use href="#d-wave"/></svg>
       </div>
     </section>
 
     <section class="section section--day" id="hari">
+      <svg class="doodle doodle--wave day__wave" aria-hidden="true"><use href="#d-wave"/></svg>
       <div class="shell">
         <div class="section-head section-head--split day__head" data-reveal>
           <div>
@@ -618,6 +649,7 @@
         <div class="cta" data-reveal>
           <span class="shape shape--dot-grid dot-grid--light" aria-hidden="true"></span>
           <span class="shape shape--arc-soft" aria-hidden="true"></span>
+          <svg class="doodle doodle--flower cta__flower" aria-hidden="true"><use href="#d-flower"/></svg>
           <div class="cta__copy">
             <p class="kicker kicker--light"><span class="lang-id">Kunjungan</span><span class="lang-en">Visit</span></p>
             <h2><span class="lang-id">Mari lihat kelasnya sendiri.</span><span class="lang-en">Come and see the classroom.</span></h2>
