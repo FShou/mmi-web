@@ -5209,10 +5209,6 @@ details[open] .faq__mark::after {
   }
 }
 
-.section--program + .section--join {
-  padding-top: clamp(52px, 6vw, 78px);
-}
-
 /* ==========================================================================
    Hero, simplified: flat ground, one solid colour block, no floating doodles.
    ========================================================================== */
@@ -5286,7 +5282,7 @@ details[open] .faq__mark::after {
 
 .section--program {
   background: #F6C9DB;
-  padding-bottom: 0;
+  padding-bottom: clamp(32px, 4vw, 52px);
 }
 
 .section--program .kicker {
@@ -5407,12 +5403,37 @@ details[open] .faq__mark::after {
 }
 
 .section--program + .section--join {
-  padding-top: clamp(28px, 3.5vw, 44px);
+  padding-top: clamp(24px, 3vw, 36px);
 }
 
 /* ==========================================================================
    Section details: planes, flight lines and trees outside the cards.
    ========================================================================== */
+
+.section-kid {
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.section-kid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section--join .shell {
+  position: relative;
+  z-index: 1;
+}
+
+.join__kid {
+  left: 2%;
+  bottom: 18px;
+  width: 170px;
+  opacity: .9;
+}
 
 .doodle--tree {
   color: var(--leaf);
@@ -5454,6 +5475,12 @@ details[open] .faq__mark::after {
   width: 54px;
   color: var(--wood-deep);
   opacity: .44;
+}
+
+@media (max-width: 1200px) {
+  .join__kid {
+    display: none;
+  }
 }
 
 @media (max-width: 760px) {
