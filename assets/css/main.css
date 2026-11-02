@@ -4652,3 +4652,13 @@ details[open] .faq__mark::after {
     display: none;
   }
 }
+
+/* Hero revision: the decorative children illustration was out of place.
+   Keep the hero focused on the photo slot and the text. */
+.hero__visual {
+  padding-bottom: 0;
+}
+
+.hero__doodle {
+  display: none;
+}
